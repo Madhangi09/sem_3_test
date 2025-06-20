@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test-1</title>
+</head>
+<body>
+<h2>Even or Odd Checker</h2>
+<p id="result1"></p>
+<p id="result2"></p>
+<script>
+function even_odd(x) {
+if (x%2===0) 
+{ 
+return "Even";
+}
+else 
+{
+return "Odd";
+}
+}
+let num1 = 4; 
+let num2 = 7; 
+let result1 = even_odd(num1);
+let result2 = even_odd(num2);
+document.getElementById("result1").innerText ="Number 1: " + num1 + " is " + result1;
+document.getElementById("result2").innerText ="Number 2: " + num2 + " is " + result2;
+</script>
+</body>
+</html>
+
