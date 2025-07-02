@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Tracker</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body style="background-color:lightgray;">
+<h2> Employee Form </h2>
+<form id="Employeeform">
+<input type="text" id="name" required>
+<input type="number" id="salary" required>
+<button type="submit">Click here</button>
+</form>
+<h3> Employee List </h3>
+<script>
+const employees=[];
+document.getElementById("EmployeeForm").addEventListener("submit", function(event) {
+event.preventDefault();
+let name=document.getElementById("name").value;
+let salary=Number(document.getElementById("salary").value);
+let employee={  // Create object
+name:name,
+salary:salary,
+status:salary >= 50000 ? "High Salary" : "Low Salary"
+};
+employees.push(employee)
+displayEmployees();
+this.reset();
+});
+function displayEmployees() 
+const list=document.getElementById("EmployeeList");
+list.innerHTML = "";
+</script>
+</body>
+</html>
+
